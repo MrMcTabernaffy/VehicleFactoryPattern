@@ -3,12 +3,22 @@ package vehicle;
 public class Lorry extends Vehicle {
     private final int ART = 7000;
     
-    public Lorry(){
+    public Lorry(){        
         super();
+        roadTax = ART;
     }
     
-    public double roadTax(double amount){        
-        roadTax += (int)Math.round(amount/ART) * taxYears;
+    public int taxStart(int start){
+        startYear = start;
+        return startYear;
+    }
+        
+    public int taxEnd(int finish){ 
+        endYear = finish;
+        return endYear;
+    }
+    
+    public double roadTax(){  
         return roadTax;
     }
 }

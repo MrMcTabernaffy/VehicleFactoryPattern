@@ -5,10 +5,20 @@ public class Car extends Vehicle{
     
     public Car(){
         super();
+        roadTax = ART;
     }
     
-    public double roadTax(double amount){
-        roadTax += (int)Math.round(amount/ART);
+    public int taxStart(int start){
+        startYear = start;
+        return startYear;
+    }
+        
+    public int taxEnd(int finish){ 
+        endYear = finish;
+        return endYear;
+    }
+    
+    public double roadTax(){  
         return roadTax;
-    } 
+    }
 }
